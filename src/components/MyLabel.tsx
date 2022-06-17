@@ -24,3 +24,6 @@ export const MyLabel = ({ label = 'No label', size = 'normal', allCaps = false, 
   return (
     <span style={{ color: fontColor, backgroundColor }} className={`label ${size} text-${color}`}>{allCaps ? label.toUpperCase() : label}</span>)
 }
+
+
+export default MyLabel
