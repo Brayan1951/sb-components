@@ -13,13 +13,14 @@ export interface Props {
   allCaps?: boolean
   color?: 'primary' | 'secondary' | 'tertiary'
   fontColor?: string
+  backgroundColor?: string
 
 }
 
 
 
 
-export const MyLabel = ({ label = 'No label', size = 'normal', allCaps = false, color = 'primary', fontColor = '#5517ac' }: Props) => {
+export const MyLabel = ({ label = 'No label', size = 'normal', allCaps = false, color = 'primary', fontColor = '#5517ac', backgroundColor = 'transparent' }: Props) => {
   return (
-    <span style={{ color: fontColor }} className={`label ${size} text-${color}`}>{allCaps ? label.toUpperCase() : label}</span>)
+    <span style={{ color: fontColor, backgroundColor }} className={`label ${size} text-${color}`}>{allCaps ? label.toUpperCase() : label}</span>)
 }
